@@ -146,8 +146,6 @@ tinymce.PluginManager.add('suggestions', function(editor) {
                         insertCompletionNode(ed, substr);
                     }							
                 }
-            }else{
-                //console.log(theSub.charAt(0));
             }
         }else{
             //TODO
@@ -166,18 +164,10 @@ tinymce.PluginManager.add('suggestions', function(editor) {
     editor.on('keyup', (event) => {
         if(!waiting){
             process(event, editor)
-        }else{
-            /*if(keyCheck(event.code)){
-                //console.log('TODO', event.key);
-                
-            }else{
-                removeSuggestionNode();
-                resetSuggestion();
-            }*/							
         }						
     });
 
-    editor.on('keydown', (event) => { //console.log(event.code);
+    editor.on('keydown', (event) => {
         if(event.code == 'Tab' && waiting){
             cancelEvent(event)
             completeWord(editor)
