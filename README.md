@@ -16,8 +16,7 @@ INSERT LINK HERE
 
 ### Features
 
-* LOL
-* Snoopy
+TODO
 
 ### Example
 
