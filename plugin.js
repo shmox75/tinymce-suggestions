@@ -1,6 +1,5 @@
 
-tinymce.PluginManager.add('suggestions', function(editor) {
-    var VK = tinymce.util.VK;
+tinymce.PluginManager.add('suggestions', function(editor) {    
 
     const searchFunction = editor.getParam("search_function", null);
     const debounceTime = editor.getParam("debounce_time", 250); //ms
