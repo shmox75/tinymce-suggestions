@@ -10,14 +10,6 @@ The completion function can be triggered by pressing the `Tab` key in the keyboa
 
 ![TinyMCE suggestions screenshot](image.png)
 
-### Demo
-
-INSERT LINK HERE
-
-### Features
-
-TODO
-
 ### Example
 
 ```javascript
