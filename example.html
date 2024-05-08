@@ -1,35 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-        <meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		
-		<script src="tinymce/tinymce.min.js"></script>
-        <script src="plugin.js"></script>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <script>
-            tinymce.init({
-                selector: "#mytextarea",  // change this value according to your HTML
-                plugins: "suggestions",
-                promotion: false,
-                debounce_time: 100,
-                search_function: async ( keyword ) => {
-                    const response = await fetch("https://baconipsum.com/api/?type=all-meat&paras=5&start-with-lorem=1");
-                    if(response.ok){
-                        const jsonResponse = await response.json();
-                        //return jsonResponse[0].split(' ').shift();
-                        return jsonResponse;
-                    }else{
-                        throw new Error("ERR")
-                    }
+    <script src="node_modules/tinymce/tinymce.min.js"></script>
+    <script src="plugin.js"></script>
+
+    <script defer>
+        tinymce.init({
+            selector: 'textarea',  // change this value according to your HTML
+            license_key: 'gpl',
+            plugins: "suggestions",
+            promotion: false,
+            debounce_time: 100,
+            search_function: async (keyword) => {
+                const response = await fetch("https://baconipsum.com/api/?type=all-meat&paras=5&start-with-lorem=1");
+                if (response.ok) {
+                    const jsonResponse = await response.json();
+                    //return jsonResponse[0].split(' ').shift();
+                    return jsonResponse;
+                } else {
+                    throw new Error("ERR")
                 }
-            });
-        </script>
-    </head>
+            }
+        });
+    </script>
+	<title>TinyMCE suggestions</title>
+</head>
 
-    <body>
-		<h1>TinyMCE suggestions</h1>
-		<textarea id="mytextarea">
+<body>
+<h1>TinyMCE suggestions</h1>
+<textarea>
 			<p>Use one of this words from the list to see autocomplete. Use Tab for autocompletion</p>
 			<p>[
 				Adrar,
@@ -40,6 +42,6 @@
 				Annaba
 			]</p>
 		</textarea>
-	</body>
+</body>
 
 </html>
