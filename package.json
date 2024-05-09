@@ -1,0 +1,39 @@
+{
+  "name": "tinymce-suggestions",
+  "version": "1.0.0",
+  "description": "TinyMCE suggestions is a an auto-complete plugin.",
+  "main": "plugin.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/richard-muvirimi/tinymce-suggestions.git"
+  },
+  "keywords": [
+    "tiny-mce",
+    "suggestions",
+    "autocomplete",
+    "suggest",
+    "completions"
+  ],
+  "author": {
+    "name": "Mokrane",
+    "url": "https://github.com/shmox75"
+  },
+  "contributors": [
+    {
+      "name": "Richard Muvirmi",
+      "email": "richard@tyganeutronics.com",
+      "url": "https://richard.co.zw"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/richard-muvirimi/tinymce-suggestions/issues"
+  },
+  "homepage": "https://github.com/richard-muvirimi/tinymce-suggestions#readme",
+  "devDependencies": {
+    "tinymce": "^7.1.0"
+  }
+}
