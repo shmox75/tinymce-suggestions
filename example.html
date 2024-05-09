@@ -14,7 +14,15 @@
             plugins: "suggestions",
             promotion: false,
             debounce_time: 100,
-            search_function: async (keyword) => {
+			terms_list: [
+				'Adrar',
+				'Alger',
+				'Tizi-Ouzou',
+				'Oran',
+				'Ouargla',
+				'Annaba',
+			],
+            /*search_function: async (keyword) => {
                 const response = await fetch("https://baconipsum.com/api/?type=all-meat&paras=5&start-with-lorem=1");
                 if (response.ok) {
                     const jsonResponse = await response.json();
@@ -23,7 +31,7 @@
                 } else {
                     throw new Error("ERR")
                 }
-            }
+            }*/
         });
     </script>
 	<title>TinyMCE suggestions</title>
